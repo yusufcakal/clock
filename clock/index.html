@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clock</title>
+	<link rel="icon" type="text/css" href="images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<p id="time"></p>
+
+	<script type="text/javascript">
+
+	var hours, minute, second;
+
+		var color = function () {
+			var rgb = "";
+			for (var i=0; i<3; i++) {
+				var digit =Matwh.floor(Math.random()*10);
+				rgb += digit;
+			}
+			console.log(rgb);
+			return rgb;
+		}
+
+		function setDate() {
+			var date = new Date();
+			hours = date.getHours() < 10 ?  "0" + date.getHours() : date.getHours();
+			minute = date.getMinutes() < 10 ?  "0" + date.getMinutes() : date.getMinutes();
+			second = date.getSeconds() < 10 ?  "0" + date.getSeconds() : date.getSeconds();
+
+			var h = hours.toString(16).length > 1 ? hours.toString(16).slice(1) : hours.toString(16).slice(0,1);
+			var m = minute.toString(16).length > 1 ? minute.toString(16).slice(1) : minute.toString(16).slice(0,1);
+			var s = second.toString(16).length > 1 ? second.toString(16).slice(1) : second.toString(16).slice(0,1);
+
+			var result = "#" + h + s + m + h + s + m;
+
+			document.getElementById('time').innerHTML = hours + "." + minute + "." + second;
+			document.body.style.backgroundColor = result;
+			console.log(result);
+
+		}
+
+		window.setInterval(setDate, 1000);
+
+	</script>
+</body>
+</html>
