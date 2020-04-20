@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery Form</title>
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+	<script type="text/javascript" src="./js/script.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.js"></script>
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-9">
+				<table class="table table-striped">
+				  <thead>
+				    <tr>
+				      <th scope="col">İsim Soyisim</th>
+				      <th scope="col">Telefon</th>
+				      <th scope="col">E-Mail</th>
+				      <th scope="col">Cinsiyet</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+						
+				  </tbody>
+				</table>
+			</div>
+			<div class="col-3">
+				<div class="form-group form-vales">
+					<input id="fullname" class="form-control" placeholder="İsim Soyisim">
+					<input id="phone" class="form-control" placeholder="Telefon">
+					<input id="mail" class="form-control" placeholder="E-Mail">
+					<div class="row sex">
+						<div class="form-check form-check-inline">
+							<label class="form-check-label"> Cinsiyet </label>
+						  <label class="form-check-label">
+						    <input  type="radio" name="radio" value="Erkek" checked> Erkek
+						  </label>
+						</div>
+						<div class="form-check form-check-inline">
+						  <label class="form-check-label">
+						    <input type="radio" name="radio" value="Kız"> Kız
+						  </label>
+						</div>
+					</div>
+					<button id="save" type="button" class="btn btn-info">Kaydet</button>
+					<div class="alert" role="alert">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
